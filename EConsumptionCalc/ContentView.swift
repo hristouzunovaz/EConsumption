@@ -10,7 +10,19 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
+        NavigationView {
+            VStack {
+                NavigationLink(destination: DataEntryView()) {
+                    Text("Data entry")
+                }.buttonStyle(PlainButtonStyle())
+                NavigationLink(destination: CalculatorView()) {
+                    Text("Calculator")
+                }.buttonStyle(PlainButtonStyle())
+                NavigationLink(destination: SettingsView()) {
+                    Text("Settings")
+                }.buttonStyle(PlainButtonStyle())
+            }
+        }
     }
 }
 
